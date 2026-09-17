@@ -1,0 +1,26 @@
+import os
+
+# Base System Parameters
+DEFAULT_STRESS_DURATION_SEC = 1.80
+DEFAULT_MATRIX_SIZE = 1024
+MAX_POH_HOURS = 35000.0
+
+# Scoring Weights (Sum = 1.0)
+WEIGHT_VEC = 0.35  # Memory / ECC Integrity (H_v)
+WEIGHT_FREQ = 0.20 # Boost Clock Retention (H_f)
+WEIGHT_TEMP = 0.20 # Thermal History (H_t)
+WEIGHT_COMP = 0.25 # Compute / TFLOPS Yield (H_c)
+
+# Health Thresholds
+ECC_UNCORRECTABLE_THRESHOLD = 10
+CRITICAL_TEMP_THRESHOLD_C = 85.0
+ALPHA_THERMAL_DECAY = 0.05
+MIN_HEALTH_THRESHOLD_THETA = 0.55
+
+# Scope 3 Carbon Parameters
+BASE_EMBODIED_CARBON_KG = 650.0  # kg CO2e
+DEFAULT_REFURB_EFFICIENCY_GAMMA = 0.72
+TARGET_LIFESPAN_EXT_YEARS = 2.0
+
+# Output Paths
+DEFAULT_PDF_OUTPUT_PATH = "output/EcoAccel_ITAD_Certificate.pdf"
